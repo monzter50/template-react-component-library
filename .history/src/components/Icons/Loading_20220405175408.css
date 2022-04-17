@@ -1,0 +1,15 @@
+.svg {
+    /* ... */
+    --speed: 5s;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .svg {
+      --speed: 10s;
+    }
+  }
+  
+  .path {
+    /* ... */
+    animation: load var(--speed, 5s) linear infinite;
+  }

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig.json to read more about this file */
+    "target": "es5", 
+    "esModuleInterop": true, 
+    "forceConsistentCasingInFileNames": true,
+    "strict": true, 
+    /* Skip type checking .d.ts files that are included with TypeScript. */
+    "skipLibCheck": true,
+    "jsx": "preserve", 
+    "module": "esnext",  
+    "declaration": true,
+    "declarationDir": "types",
+    "sourceMap": true,
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,                             
+    "lib": ["es2020", "dom"],
+    "noEmit": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
+    "noErrorTruncation": false,
+    "allowJs": true,
+    "paths": {
+      "@monster/componets": ["./src/components"],
+    },
+    "types": ["jest", "node", "react"]
+  },
+  "exclude": ["**/.*/", "**/build", "**/node_modules", "docs/export"]
+}
