@@ -34,7 +34,7 @@ export interface BaseButtonProps {
   block?: boolean;
   htmlType?: ButtonHTMLType;
   children?: React.ReactNode;
-  onClick?: () =>void;
+  onClick?: ?(evt: Konva.KonvaEventObject<MouseEvent>): void;
 }
 
 export default function Button (props: BaseButtonProps) {

@@ -34,7 +34,7 @@ export interface BaseButtonProps {
   block?: boolean;
   htmlType?: ButtonHTMLType;
   children?: React.ReactNode;
-  onClick?: () =>void;
+  // onClick?: () =>void;
 }
 
 export default function Button (props: BaseButtonProps) {
@@ -58,14 +58,14 @@ export default function Button (props: BaseButtonProps) {
   // small => sm
   let sizeCls = ''
   switch (customizeSize) {
-  case 'large':
-    sizeCls = 'lg'
-    break
-  case 'small':
-    sizeCls = 'sm'
-    break
-  default:
-    break
+    case 'large':
+      sizeCls = 'lg'
+      break
+    case 'small':
+      sizeCls = 'sm'
+      break
+    default:
+      break
   }
 
   const iconType = loading ? 'loading' : icon

@@ -1,6 +1,6 @@
 import React from 'react'
 import './Loading.css'
-type SimpleLoadingIconProps = {
+type SimpleLoadingIcon = {
   color?:string;
   thickness?:number;
   height?:number;
@@ -11,7 +11,7 @@ const SimpleLoadingIcon = ({
   thickness = 2,
   height = 50,
   width = 50
-}:SimpleLoadingIconProps) => (
+}:SimpleLoadingIcon) => (
   <svg
     className={'svg'}
     viewBox="0 0 24 24"
