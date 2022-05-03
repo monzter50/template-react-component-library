@@ -34,7 +34,6 @@ export interface BaseButtonProps {
   block?: boolean;
   htmlType?: ButtonHTMLType;
   children?: React.ReactNode;
-  // onClick?: () =>void;
 }
 
 export default function Button(props: BaseButtonProps) {
@@ -82,7 +81,7 @@ export default function Button(props: BaseButtonProps) {
     [`${prefixCls}-rtl`]: direction === "rtl",
   });
 
-  const iconNode = loading ? <SimpleLoadingIcon height={20} width={20}/> : icon || null;
+  const iconNode = loading ? <SimpleLoadingIcon height={10} width={10}/> : icon || null;
 
   console.log(classes);
   return (

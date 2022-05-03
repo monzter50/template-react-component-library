@@ -34,7 +34,6 @@ export interface BaseButtonProps {
   block?: boolean;
   htmlType?: ButtonHTMLType;
   children?: React.ReactNode;
-  // onClick?: () =>void;
 }
 
 export default function Button(props: BaseButtonProps) {
