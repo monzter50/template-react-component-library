@@ -1,5 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
-import babel, {getBabelOutputPlugin} from '@rollup/plugin-babel';
+import babel from '@rollup/plugin-babel';
 import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import dts from "rollup-plugin-dts";
@@ -29,22 +29,22 @@ export default [
       },
     ],
     plugins: [
-        peerDepsExternal(),
-        image(),
-        resolve(),
-        babel({  
-          exclude: "node_modules/**",
-          presets: ["@babel/preset-react"],
-        }),
-        external(),
-        svgr(),
-        commonjs(),
-        typescript({ tsconfig: "./tsconfig.json" }),
-        postcss({
-          modules: true,
-          writeDefinitions: true
-        }),
-        terser(),
+      peerDepsExternal(),
+      image(),
+      resolve(),
+      babel({  
+        exclude: "node_modules/**",
+        presets: ["@babel/preset-react"],
+      }),
+      external(),
+      svgr(),
+      commonjs(),
+      typescript({ tsconfig: "./tsconfig.json" }),
+      postcss({
+        modules: true,
+        writeDefinitions: true
+      }),
+      terser(),
     ],
   },
   {

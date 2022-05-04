@@ -79,7 +79,8 @@ export default function Button (props: BaseButtonProps) {
     [`${prefixCls}-background-ghost`]: ghost,
     [`${prefixCls}-block`]: block,
     [`${prefixCls}-dangerous`]: !!danger,
-    [`${prefixCls}-rtl`]: direction === 'rtl'
+    [`${prefixCls}-rtl`]: direction === 'rtl',
+    [`${prefixCls}-${className}`]: className?.length !== 0
   })
 
   const iconNode = loading ? <SimpleLoadingIcon height={20} width={20}/> : icon || null
