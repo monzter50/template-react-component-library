@@ -44,14 +44,14 @@ export default function Header({ user, onLogin, onLogout, onCreateAccount }: Hea
                 <span className="welcome">
               Welcome, <b>{user.name}</b>!
                 </span>
-                <Button htmlType='button' className='btn-monster' size="small" onClick={onLogout} >
+                <Button htmlType='button' size="small" onClick={onLogout} >
                 Log out
                 </Button>
               </>
             )
             : (
               <>
-                <Button size="small" onClick={onLogin} >
+                <Button size="small" type='primary' onClick={onLogin} >
               Log in
                 </Button>
                 <Button size="small" onClick={onCreateAccount} >

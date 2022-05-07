@@ -9,6 +9,7 @@ import './Button.css'
 const ButtonTypes = tuple(
   'default',
   'primary',
+  'secondary',
   'ghost',
   'dashed',
   'danger',
