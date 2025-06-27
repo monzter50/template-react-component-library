@@ -1,14 +1,20 @@
-import React from 'react'
-import { ComponentStory, ComponentMeta } from '@storybook/react'
-import Loading from './Loading'
+import type { Meta, StoryObj } from '@storybook/react';
+import Loading from './Loading';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
-export default {
+const meta: Meta<typeof Loading> = {
   title: 'Example/Loading',
-  component: Loading
-} as ComponentMeta<typeof Loading>
+  component: Loading,
+  tags: ['autodocs'],
+  parameters: {
+    layout: 'centered',
+  },
+};
 
-// More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const Template: ComponentStory<typeof Loading> = (args) => <Loading {...args} />
+export default meta;
+type Story = StoryObj<typeof Loading>;
 
-export const SimpleLoadingIcon = Template.bind({})
+export const SimpleLoadingIcon: Story = {
+  args: {
+    color: "#cd0826"
+  },
+};

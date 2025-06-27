@@ -1,4 +1,4 @@
-import { Meta } from '@storybook/addon-docs';
+import { Meta, Story } from '@storybook/blocks';
 import Code from './assets/code-brackets.svg';
 import Colors from './assets/colors.svg';
 import Comments from './assets/comments.svg';
@@ -10,7 +10,8 @@ import StackAlt from './assets/stackalt.svg';
 
 <Meta title="Example/Introduction" />
 
-<style>{`
+<style>
+  {`
   .subheading {
     --mediumdark: '#999999';
     font-weight: 900;
@@ -110,9 +111,8 @@ import StackAlt from './assets/stackalt.svg';
     font-size: 12px;
     display: inline-block;
   }
-
-  
-`}</style>
+  `}
+</style>
 
 # Welcome to Storybook
 
@@ -207,5 +207,5 @@ We recommend building UIs with a [**component-driven**](https://componentdriven.
 
 <div className="tip-wrapper">
   <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>src/stories/Introduction.stories.mdx</code>
-</div>
+  <code>stories/Introduction.mdx</code>
+</div> 
