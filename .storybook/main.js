@@ -1,13 +1,23 @@
+const path = require('path');
+
 module.exports = {
-  "stories": [
-    "../src/**/*.stories.mdx",
+  stories: [
+    "../src/**/*.mdx",
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
-  "addons": [
+  addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials",
+    "@storybook/addon-essentials"
   ],
-  "core": {
-    "builder": "webpack5"
+  framework: {
+    name: "@storybook/react-webpack5",
+    options: {}
+  },
+  docs: {
+    autodocs: 'tag',
+    defaultName: 'Documentation'
+  },
+  typescript: {
+    reactDocgen: 'react-docgen'
   }
-}
+};

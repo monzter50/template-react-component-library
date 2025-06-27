@@ -22,6 +22,11 @@ module.exports = {
     '@typescript-eslint',
     'jest'
   ],
+  settings: {
+    react: {
+      version: '18.2.0'
+    }
+  },
   rules: {
     indent: ['error', 2],
     'no-multi-spaces': ['error'],
@@ -30,5 +35,6 @@ module.exports = {
     'jest/no-identical-title': 'error',
     'jest/prefer-to-have-length': 'warn',
     'jest/valid-expect': 'error'
-  }
+  },
+  ignorePatterns: ['dist/**/*', 'build/**/*', 'storybook-static/**/*']
 }
